@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Rubik Beastly', cursive;
+*/
+
+* {
+    /* gets rid of padding, margin, and includes border+padding with the "width"/"height" property */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    /* Takes away the bold from the h1s. Aesthetic only */
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    /* Pushes the rest of the content 20px away from it. Aesthetic only */
+    margin-bottom: 20px;
+}
+
+a {
+    /* Removes the underline on the links. Aesthetic only */
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.main {
+    /* vh = viewport height. Line below sets #main to 100% of the view port height. */
+    height: 100vh;
+    /* Make it flex, change main axis so rest of content goes below it, and center everything. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* So text doesnt go against the right and left if viewing on smaller screen */
+    /* 0 sets padding for top and bottom, 20px is for left and right */
+    padding: 0 20px; 
+
+    /* absolute needs an ancestor that has a position other than static. This doesnt change anything about "main" */
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("cover.png");
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+#darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.7);
+}
+
+#content {
+    color: white;
+    z-index: 10;
+    text-align: center;
+}
+
+#click {
+    /* Allows you t set bottom margin as well as width and height. cant do that with inline */
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px solid white;
+    padding: 10px 30px;
+    background-color: #4b5163;
+    border-radius: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+#click:hover {
+    /* Does all this when hovering over button */
+    transform: scale(0.95);
+}
